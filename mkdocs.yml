@@ -1,4 +1,4 @@
-site_name: Plantilla para Documentación
+site_name: Blog ingeniería Carlos Gutiérrez
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
@@ -29,7 +29,7 @@ theme:
   highlightjs: true 
   palette:
       - scheme: default
-        primary: purple
+        primary: dark blue
 
   features:
     - content.code.copy
