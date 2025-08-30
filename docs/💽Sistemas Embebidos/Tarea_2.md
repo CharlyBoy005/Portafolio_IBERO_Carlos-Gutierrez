@@ -6,7 +6,7 @@ Realizar las siguientes tareas usando codigos que ocupen logica y mascaras, no s
 
 1. **Contador binario 4 bits**:En cuentro leds debe mostrarse cad segundo la representacion binaria del 0 al 15.
 2. **Barrido de leds**:Correr un “1” por cuatro LEDs P0..P3 y regresar (0→1→2→3→2→1).
-3. **Secuencia en código Gray**
+3. **Secuencia en código Gray**:Es una representación binaria donde cada valor sucesivo difiere en un solo bit del valor anterior.
 
 ## Contador binario de 4 bits
 
@@ -138,3 +138,6 @@ int main() {
     }
 }
 ```
+## Diagrama de conexión 
+
+![Diagrama](../../recursos/imgs/Diagrama.jpg)
