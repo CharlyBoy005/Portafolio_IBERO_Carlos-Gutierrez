@@ -75,3 +75,95 @@ int main() {
     }
 }
 ```
+<iframe width="560" height="315"
+  src="https://www.youtube.com/embed/mna9pMntb_0?si=xqcZKtNcz2EJwRKj"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen>
+</iframe>
+
+```bash
+#include "pico/stdlib.h"
+#include "hardware/gpio.h"
+
+const uint LED_PINS[] = {0, 1, 2, 3};
+const int NUM_LEDS = sizeof(LED_PINS) / sizeof(LED_PINS[0]);
+
+const uint LEFT_BUTTON_PIN = 4;
+const uint RIGHT_BUTTON_PIN = 5;
+
+const int DEBOUNCE_DELAY_MS = 100;
+
+void setup_gpio();
+void update_leds(int current_led_index);
+
+int main() {
+    stdio_init_all();
+    setup_gpio();
+
+    int current_led = 0;
+    update_leds(current_led);
+
+    while (true) {
+        if (!gpio_get(RIGHT_BUTTON_PIN)) {
+            sleep_ms(DEBOUNCE_DELAY_MS);
+            if (!gpio_get(RIGHT_BUTTON_PIN)) {
+                current_led++;
+                if (current_led >= NUM_LEDS) {
+                    current_led = 0;
+                }
+                update_leds(current_led);
+                while (!gpio_get(RIGHT_BUTTON_PIN));
+            }
+        }
+
+        if (!gpio_get(LEFT_BUTTON_PIN)) {
+            sleep_ms(DEBOUNCE_DELAY_MS);
+            if (!gpio_get(LEFT_BUTTON_PIN)) {
+                current_led--;
+                if (current_led < 0) {
+                    current_led = NUM_LEDS - 1;
+                }
+                update_leds(current_led);
+                while (!gpio_get(LEFT_BUTTON_PIN));
+            }
+        }
+    }
+    return 0;
+}
+
+void setup_gpio() {
+    for (int i = 0; i < NUM_LEDS; i++) {
+        gpio_init(LED_PINS[i]);
+        gpio_set_dir(LED_PINS[i], GPIO_OUT);
+    }
+
+    gpio_init(LEFT_BUTTON_PIN);
+    gpio_set_dir(LEFT_BUTTON_PIN, GPIO_IN);
+    gpio_pull_up(LEFT_BUTTON_PIN);
+
+    gpio_init(RIGHT_BUTTON_PIN);
+    gpio_set_dir(RIGHT_BUTTON_PIN, GPIO_IN);
+    gpio_pull_up(RIGHT_BUTTON_PIN);
+}
+
+void update_leds(int current_led_index) {
+    for (int i = 0; i < NUM_LEDS; i++) {
+        if (i == current_led_index) {
+            gpio_put(LED_PINS[i], 1);
+        } else {
+            gpio_put(LED_PINS[i], 0);
+        }
+    }
+}
+```
+
+## Diagrama de conexión
+
+
+![Diagrama](../../recursos/imgs/Diagrama2.jpg)
+
+
+
+
