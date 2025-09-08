@@ -5,8 +5,9 @@
 
 
 
-[Descargar especificación (PDF)](\REC\Archivos\syllabus.pdf)
 
-<object data="../REC/Archivos/syllabus.pdf" type="application/pdf" width="100%" height="600">
-  <p>No se pudo mostrar el PDF. <a href="../REC/Archivos/syllabus">Descargar</a></p>
+[Descargar especificación (PDF)](recursos/archivos/syllabus.pdf)
+
+<object data="../recursos/archivos/Calendario.pdf" type="application/pdf" width="100%" height="600">
+  <p>No se pudo mostrar el PDF. <a href="../recursos/archivos/syllabus.pdf">Descargar</a></p>
 </object>
