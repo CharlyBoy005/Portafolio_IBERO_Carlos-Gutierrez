@@ -16,7 +16,7 @@ Lampara para dormir que cambia el color y potencia de la luz para ayudar a induc
 
 ## Tabla comparativa
 
-![Tabla comparativa](../../recursos/imgs/Tabla%20comparativa%20primer%20tarea.png)
+![Tabla comparativa](../recursos/imgs/Tabla_comparativa_primer_tarea.png)
 
 ---
 

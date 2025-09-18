@@ -48,6 +48,7 @@ Si no coincide (la pelota no está en el último LED de ese lado), el botón se 
 
 #define NUM_LEDS 5
 #define DELAY_MS 400
+
 const uint BTN1 = 5; // botón izquierdo
 const uint BTN2 = 6; // botón derecho
 const uint LED_PINS[NUM_LEDS] = {0, 1, 2, 3, 4};
@@ -155,9 +156,9 @@ int main()
             }
             else
             {
-                // Player 2 (right) scores
+                // Jugador dos (derehca) scores
                 score_point(LEDG1);
-                current_led = NUM_LEDS / 2; // Reset to center
+                current_led = NUM_LEDS / 2; // Resetea al centro
                 direction = 1;              // Move towards winner (right)
             }
         }
@@ -188,7 +189,7 @@ int main()
 ## Diagrama de conexión
 
 
-![Diagrama](../../recursos/imgs/Diagrama4.jpg)
+![Diagrama](../recursos/imgs/Diagrama4.jpg)
 
 ## ¿Se están respetando los límites de corriente de los pines de la Pico 2?
 
