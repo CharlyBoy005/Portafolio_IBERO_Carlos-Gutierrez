@@ -4,7 +4,7 @@ Hola, mi nombre es Carlos Gutiérrez Martínez, tengo 19 años y soy estudiante 
 
 ## Propuesta proyecto
 
-La propuesta de mi proyecto a desarrollar este semestre consiste en un dispositivo capaz de medir la intensidad de los rayos UV del entorno en el que se encuentre y con base a eso poder realizar un diagnóstico de los cuidados necesarios para evitar daños en la piel, la base del producto se encuentra en la personalización de información de cada usuario con el bojetivo de poder adaptar los cuidados a todos los tipos de piel.
+La propuesta de mi proyecto a desarrollar este semestre consiste en un dispositivo capaz de medir la intensidad de los rayos UV del entorno en el que se encuentre y con base a eso poder realizar un diagnóstico de los cuidados necesarios para evitar daños en la piel, el producto está centrado principalmente en evitar daños o enfermedades potenciales a aquellas personas que cuentan con un tipo de piel sensible, al mismo tiempo busca poder funcionar como un producto que permita mantener un mejor cuidad de piel.
 
 ## Boceto inicial
 
