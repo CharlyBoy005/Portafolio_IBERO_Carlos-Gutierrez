@@ -84,6 +84,8 @@ int main() {
 }
 ```
 
+![Diagrama de señal prefiltrado](../../recursos/imgs/Diagramamotor.jpeg)
+
 ## Tarea 7.2
 
 Programar un buzzer piezoeléctrico para reproducir una melodía reconocible.
@@ -281,3 +283,4 @@ int main() {
 }
 
 ```
+![Diagrama de señal prefiltrado](../../recursos/imgs/Diagramaoscil.jpeg)
