@@ -15,4 +15,4 @@ Un Marco "real-ganar-vale la pena" (Real-Win-Worth it o RGW) es una herramienta 
 
 3. **Vale la pena (¿Vale la pena?):** Se determina si la inversión en el producto es rentable y justificará el esfuerzo. La empresa debe considerar los beneficios esperados frente a los costos y riesgos asociados.
 
-[Descargar especificación (PDF)](recursos/archivos/Marco.pdf)
+[Descargar especificación (PDF)](../recursos/archivos/Marco.pdf)
