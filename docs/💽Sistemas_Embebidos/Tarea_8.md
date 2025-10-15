@@ -2,7 +2,7 @@
 
 Por medio de comunicación entre dos Pico 2 , lograr accionar leds con botones.
 
-## Primera prueba
+## Código 1 (echo)
 
 
 ```bash
@@ -48,7 +48,7 @@ int main() {
 
 ```
 
-## Segundo codigo (envia y recibe)
+## Código 2 (envia y recibe)
 
 ```bash
 #include "pico/stdlib.h"
@@ -171,5 +171,6 @@ int main() {
 }
 
 ```
+
 
 ![Diagrama de señal prefiltrado](/../recursos/imgs/Diagrama_com.jpg)
