@@ -1,6 +1,8 @@
 # Tarea 8
 
-Por medio de comunicación entre dos Pico 2 , lograr accionar leds con botones.
+1 - Por medio de comunicación entre dos Pico 2 , lograr accionar leds con botones.
+2 - Por medio de la consola lograr prender leds conectados a las Pico 2.
+3 - Elaborar un Hanshake.
 
 ## Código 1 (echo)
 
@@ -271,14 +273,179 @@ int main() {
 
 # Handshake
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vJIdFFVWSVY?si=WbIGB0pVrfPuJHTt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Código maestro
 
 ```bash
+#include <stdio.h>
+#include "pico/stdlib.h"
+#include <string>
 
+#define UART_ID uart0
+#define BAUD_RATE 115200
+#define UART_TX_PIN 0
+#define UART_RX_PIN 1
+#define LED_PIN 2
+
+using namespace std;
+
+int main() {
+    stdio_init_all();
+    sleep_ms(2000);
+
+    printf("\n[Pico A listo] Escribe 'conectar' para iniciar handshake.\n");
+
+    uart_init(UART_ID, BAUD_RATE);
+    gpio_set_function(UART_TX_PIN, GPIO_FUNC_UART);
+    gpio_set_function(UART_RX_PIN, GPIO_FUNC_UART);
+    uart_set_format(UART_ID, 8, 1, UART_PARITY_NONE);
+    uart_set_fifo_enabled(UART_ID, true);
+
+    gpio_init(LED_PIN);
+    gpio_set_dir(LED_PIN, GPIO_OUT);
+    gpio_put(LED_PIN, 0);
+
+    string usb_msg = "";
+    string uart_msg = "";
+    bool conectado = false;
+
+    while (true) {
+        // Leer comandos desde USB
+        int ch = getchar_timeout_us(0);
+        if (ch != PICO_ERROR_TIMEOUT) {
+            if (ch == '\n' || ch == '\r') {
+                if (!usb_msg.empty()) {
+                    uart_puts(UART_ID, (usb_msg + "\n").c_str());
+                    printf("[Enviado por UART]: %s\n", usb_msg.c_str());
+                    usb_msg = "";
+                }
+            } else usb_msg += (char)ch;
+        }
+
+        // Leer mensajes por UART
+        while (uart_is_readable(UART_ID)) {
+            char c = uart_getc(UART_ID);
+            if (c == '\n' || c == '\r') {
+                if (!uart_msg.empty()) {
+                    printf("[Recibido]: %s\n", uart_msg.c_str());
+
+                    if (!conectado) {
+                        if (uart_msg == "ok") {
+                            printf("Pico B respondió OK.\n");
+                        } else if (uart_msg == "conectado") {
+                            printf("Conexión establecida \n");
+                            conectado = true;
+                        } else {
+                            printf("[Error] Mensaje inesperado durante handshake.\n");
+                        }
+                    } else {
+                        if (uart_msg == "on" || uart_msg == "ON") {
+                            gpio_put(LED_PIN, 1);
+                            printf("[LED] Encendido (por comando remoto)\n");
+                        } else if (uart_msg == "off" || uart_msg == "OFF") {
+                            gpio_put(LED_PIN, 0);
+                            printf("[LED] Apagado (por comando remoto)\n");
+                        } else {
+                            printf("Error: Comando desconocido tras conexión.\n");
+                        }
+                    }
+                    uart_msg = "";
+                }
+            } else uart_msg += c;
+        }
+
+        sleep_ms(10);
+    }
+}
 
 ```
 
 ## Código esclavo
+```bash
+#include <stdio.h>
+#include "pico/stdlib.h"
+#include <string>
+
+#define UART_ID uart0
+#define BAUD_RATE 115200
+#define UART_TX_PIN 0
+#define UART_RX_PIN 1
+#define LED_PIN 2
+
+using namespace std;
+
+int main() {
+    stdio_init_all();
+    sleep_ms(2000);
+
+    printf("\nPico B listo, Esperando handshake desde el otro dispositivo...\n");
+
+    uart_init(UART_ID, BAUD_RATE);
+    gpio_set_function(UART_TX_PIN, GPIO_FUNC_UART);
+    gpio_set_function(UART_RX_PIN, GPIO_FUNC_UART);
+    uart_set_format(UART_ID, 8, 1, UART_PARITY_NONE);
+    uart_set_fifo_enabled(UART_ID, true);
+
+    gpio_init(LED_PIN);
+    gpio_set_dir(LED_PIN, GPIO_OUT);
+    gpio_put(LED_PIN, 0);
+
+    string uart_msg = "";
+    string usb_msg = "";
+    bool conectado = false;
+
+    while (true) {
+        // Leer mensajes entrantes por UART
+        while (uart_is_readable(UART_ID)) {
+            char c = uart_getc(UART_ID);
+            if (c == '\n' || c == '\r') {
+                if (!uart_msg.empty()) {
+                    printf("Recibido: %s\n", uart_msg.c_str());
+
+                    if (!conectado) {
+                        if (uart_msg == "conectar") {
+                            uart_puts(UART_ID, "ok\n");
+                            sleep_ms(300);
+                            uart_puts(UART_ID, "conectado\n");
+                            conectado = true;
+                            printf("Conexión establecida\n");
+                        } else {
+                            uart_puts(UART_ID, "error\n");
+                            printf("Error, mensaje inesperado durante handshake.\n");
+                        }
+                    } else {
+                        if (uart_msg == "on" || uart_msg == "ON") {
+                            gpio_put(LED_PIN, 1);
+                            printf("LED encendido\n");
+                        } else if (uart_msg == "off" || uart_msg == "OFF") {
+                            gpio_put(LED_PIN, 0);
+                            printf("LED apagado\n");
+                        } else {
+                            printf("[Error] Comando desconocido tras conexión.\n");
+                        }
+                    }
+                    uart_msg = "";
+                }
+            } else uart_msg += c;
+        }
+
+    
+        int ch = getchar_timeout_us(0);
+        if (ch != PICO_ERROR_TIMEOUT) {
+            if (ch == '\n' || ch == '\r') {
+                if (!usb_msg.empty()) {
+                    uart_puts(UART_ID, (usb_msg + "\n").c_str());
+                    printf("[Enviado por UART]: %s\n", usb_msg.c_str());
+                    usb_msg = "";
+                }
+            } else usb_msg += (char)ch;
+        }
+
+        sleep_ms(10);
+    }
+}
+```
 
 ## Recomendaciones importantes
 
