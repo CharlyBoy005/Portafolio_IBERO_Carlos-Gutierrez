@@ -1,5 +1,7 @@
 # Semana 7
 
+![EXCEL](../recursos/imgs/EXCEL COSTOS.jpg)
+
 Hicimos una tabla de costos para nuestro prototipo con el objetivo de tener una visión clara y organizada de los recursos necesarios para su desarrollo desde cero. En ella se desglosan tanto los **costos de producción** —como materiales, componentes electrónicos, herramientas y mano de obra—, como los **costos de distribución** que se planean adoptar, incluyendo empaque, transporte y posibles canales de venta. Esta tabla nos permite **estimar el presupuesto total**, **evaluar la viabilidad económica del proyecto** y **planificar una estrategia de producción sostenible**, asegurando que el prototipo no solo sea funcional, sino también accesible y realista para su futura implementación o comercialización.
 
 ## Creando la oferta
