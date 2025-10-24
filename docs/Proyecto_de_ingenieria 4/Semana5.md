@@ -13,17 +13,29 @@ Definir quién es el cliente de un proyecto y conocer el tamaño de su mercado e
 
 ## Análisis de mercado 
 
-https://docs.google.com/document/d/1U3TrH4D3F9_TvIXy5K0je2YD7HCqBrmoy5qXrAX4u7c/edit?usp=sharing
+El análisis de mercado es importante porque permite **entender las necesidades, preferencias y comportamientos de los posibles usuarios**, así como identificar la competencia y las oportunidades existentes. Gracias a este estudio, podemos **definir mejor el público objetivo**, **ajustar el diseño y precio del producto** y **tomar decisiones más acertadas** que aumenten las posibilidades de éxito y aceptación del proyecto en el mercado real.
+
+
+[Análisis de mercado](https://docs.google.com/document/d/1U3TrH4D3F9_TvIXy5K0je2YD7HCqBrmoy5qXrAX4u7c/edit?usp=sharing)
+
+
 
 
 
 ## Cuadro de Valor
 
-https://www.canva.com/design/DAG0w_cchC4/iZkATuicc6fS7nchp_iR7w/edit?utm_content=DAG0w_cchC4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+El [cuadro de valor](https://www.canva.com/design/DAG0w_cchC4/iZkATuicc6fS7nchp_iR7w/edit?utm_content=DAG0w_cchC4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+ es fundamental porque permite comparar nuestro producto con las alternativas existentes, destacando los aspectos que lo hacen único o más beneficioso para el usuario. A través de este análisis, podemos identificar fortalezas, debilidades y oportunidades de mejora, además de comunicar con claridad el valor que aporta nuestro proyecto, tanto en funcionalidad como en costo y accesibilidad.
+
+
+
+
+
 
 ## Análisis de las 5 fuerzas de Porter
 
-El Análisis de las 5 Fuerzas de Porter es una herramienta estratégica que sirve para evaluar la competitividad de una industria o sector. Fue desarrollada por Michael Porter y busca entender qué tan atractivo o rentable puede ser un mercado, analizando los factores externos que influyen en él.
+El [análisis de las 5 fuerzas de Porter](https://www.canva.com/design/DAG0xGMiBc4/y4W1TcuNnE4gSCQcIF5zfA/edit?utm_content=DAG0xGMiBc4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) es una herramienta estratégica que sirve para evaluar la competitividad de una industria o sector. Fue desarrollada por Michael Porter y busca entender qué tan atractivo o rentable puede ser un mercado, analizando los factores externos que influyen en él.
 
 Las cinco fuerzas son:
 
@@ -37,4 +49,4 @@ Las cinco fuerzas son:
 
 - Amenaza de productos sustitutos: identifica si existen alternativas que puedan reemplazar la solución que ofrece el producto o servicio.
 
-https://www.canva.com/design/DAG0xGMiBc4/y4W1TcuNnE4gSCQcIF5zfA/edit?utm_content=DAG0xGMiBc4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
