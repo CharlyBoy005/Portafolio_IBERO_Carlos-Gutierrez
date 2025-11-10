@@ -178,7 +178,7 @@ int main() {
 ```
 
 
-![Diagrama de señal prefiltrado](/../recursos/imgs/Diagrama_com.jpg)
+![Diagrama de señal prefiltrado](../recursos/imgs/Diagrama_com.jpg)
 
 
 

@@ -84,7 +84,7 @@ int main() {
 }
 ```
 
-![Diagrama de señal prefiltrado](../../recursos/imgs/Diagramamotor.jpeg)
+![Diagrama de señal prefiltrado](../recursos/imgs/Diagramamotor.jpeg)
 
 ## Tarea 7.2
 
@@ -206,7 +206,7 @@ int main() {
 
 ```
 
-![Diagrama de señal prefiltrado](../../recursos/imgs/Diagramabuzz.jpg)
+![Diagrama de señal prefiltrado](../recursos/imgs/Diagramabuzz.jpg)
 
 
 
@@ -228,11 +228,11 @@ En este caso, queremos que fc sea un poco mayor que 60 Hz para que nuestra seña
 
 ## Señal pre filtro
 
-![Diagrama de señal prefiltrado](../../recursos/imgs/Señalpre.jpeg)
+![Diagrama de señal prefiltrado](../recursos/imgs/Señalpre.jpeg)
 
 ## Señal filtrada
 
-![Diagrama de resultados obtenidos](../../recursos/imgs/Señalfiltr.jpeg)
+![Diagrama de resultados obtenidos](../recursos/imgs/Señalfiltr.jpeg)
 
 
 
@@ -283,4 +283,4 @@ int main() {
 }
 
 ```
-![Diagrama de señal prefiltrado](../../recursos/imgs/Diagramaoscil.jpeg)
+![Diagrama de señal prefiltrado](../recursos/imgs/Diagramaoscil.jpeg)

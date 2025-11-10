@@ -140,4 +140,4 @@ int main() {
 ```
 ## Diagrama de conexión 
 
-![Diagrama](../../recursos/imgs/Diagrama.jpg)
+![Diagrama](../recursos/imgs/Diagrama.jpg)

@@ -162,7 +162,7 @@ void update_leds(int current_led_index) {
 ## Diagrama de conexión
 
 
-![Diagrama](../../recursos/imgs/Diagrama2.jpg)
+![Diagrama](../recursos/imgs/Diagrama2.jpg)
 
 
 

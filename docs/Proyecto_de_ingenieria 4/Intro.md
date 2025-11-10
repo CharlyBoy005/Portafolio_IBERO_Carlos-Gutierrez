@@ -9,7 +9,7 @@ La propuesta de mi proyecto a desarrollar este semestre consiste en un dispositi
 ## Boceto inicial
 
 
-![Diagrama](../../recursos/imgs/BCT.jpeg)
+![Diagrama](../recursos/imgs/BCT.jpeg)
 
 ## Caracteristicas que debe de tener el producto 
 

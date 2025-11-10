@@ -43,7 +43,7 @@ int main() {
 ```
 
 
-![Diagrama de resultados obtenidos](../../recursos/imgs/Tarea5resultados1.png)
+![Diagrama de resultados obtenidos](../recursos/imgs/Tarea5resultados1.png)
 
 ## Ejercicio 2
 
@@ -113,7 +113,7 @@ int main() {
 
 ```
 
-![Diagrama de resultados obtenidos](../../recursos/imgs/Diagrama_de_oscilacion.jpeg)
+![Diagrama de resultados obtenidos](../recursos/imgs/Diagrama_de_oscilacion.jpeg)
 
 
 La diferencia se dio porque en el segundo código estoy trabajando directamente con los registros y las interrupciones, y ahí la precisión depende del tiempo que tarda el procesador en atender la interrupción y volver a programar el siguiente evento. Ese pequeño retraso se acumula y hace que la señal no sea tan exacta. En cambio, el primer código usa la función del SDK, que ya está optimizada para corregir esos retardos y mantener el temporizador más estable, por eso en el osciloscopio obtuve una señal más uniforme.
