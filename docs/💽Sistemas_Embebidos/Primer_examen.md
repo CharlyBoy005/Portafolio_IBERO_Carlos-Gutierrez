@@ -23,7 +23,7 @@ Construir un juego Simón Dice de 4 colores en Raspberry Pi Pico 2.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qxONCEGjy-s?si=udAaNHlWfEXA1qbx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-``` bash
+``` c
 
 #include "pico/stdlib.h" // Librería básica de Raspberry Pi Pico (GPIO, sleep, etc.)
 #include <stdlib.h>      // Para rand() y srand()
