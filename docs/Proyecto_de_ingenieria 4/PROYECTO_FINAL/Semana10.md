@@ -4,7 +4,7 @@
 
 Durante esta semana, mi equipo decidió concentrarse en la elaboración de la tabla de costos de producción y venta con el objetivo de obtener una visión financiera integral del proyecto. Este análisis nos permitió estimar el comportamiento de las ventas a cinco años, calcular el periodo de recuperación de la inversión y proyectar las utilidades esperadas. Con ello buscamos construir un escenario sólido que respalde la viabilidad económica del producto y oriente las decisiones estratégicas en las siguientes etapas del desarrollo.
 
-A continuación incluyo el excel en el cual se trabajo lo mencionado previamente:[Descargar EXCEL](../recursos/archivos/Buisness_Case.xlsx)
+A continuación incluyo el excel en el cual se trabajo lo mencionado previamente:[Descargar EXCEL](../../recursos/archivos/Buisness_Case.xlsx)
 
 
 ## Resúmen
