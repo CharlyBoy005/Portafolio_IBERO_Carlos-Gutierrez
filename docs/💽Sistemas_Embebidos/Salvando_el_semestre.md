@@ -8,8 +8,13 @@ El proyecto final de la materia de sistemas embebidos consiste de un robot  de 1
 Para la realización de mi prototipo opté por el uso de los siguientes componentes:
 
 - Sensor Sharp 10-80 cm de tipo láser analógico.
-- Sensores amarillos.
-- Acelerómetro 
+- Motores amarillos.
+- Acelerómetro MPU -6050
+- Puente H MX 1508
+- Switch
+- Regulador de voltaje
+- Pi pico 2
+
 
 ## Complicaciones
 
@@ -22,6 +27,8 @@ El proyecto parecía muy fácil al inicio y por lo mismo me confié de que saldr
 ## PCB
 
 ![Diagrama de señal prefiltrado](../recursos/imgs/PLACS.jpeg)
+
+![Diagrama de señal prefiltrado](../recursos/imgs/PLACA.jpeg)
 
 ## Franky Senior (el que si se sabe la de chambear)
 
@@ -308,7 +315,9 @@ int main() {
 }
 
 ```
- ## Replexiones finales
+
+----------
+ ## Reflexiones finales
 
  Hubiera podido llegar a más si no fuera porque tenía muchos otros proyectos y exámenes, otros factores que intervinieron:
 
